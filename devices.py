@@ -17,3 +17,9 @@ def average_temp(devices):
 
 print(f"Average Temperature: {average_temp(readings)}")
 average_temp(readings)
+
+def hottest(devices):
+    return max(devices, key=lambda device: device['temp'])
+
+print(f"Hottest Device: {hottest(readings)['name']}, Temperature: {hottest(readings)['temp']}")
+hottest(readings)
