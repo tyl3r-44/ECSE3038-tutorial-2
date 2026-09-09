@@ -23,3 +23,12 @@ def hottest(devices):
 
 print(f"Hottest Device: {hottest(readings)['name']}, Temperature: {hottest(readings)['temp']}")
 hottest(readings)
+
+def to_status(device):
+    return {
+        "name": device["name"],
+        "room": device["room"],
+        "temp": device["temp"],
+        "online": device["online"]
+    }
+print(to_status(readings[0]))
